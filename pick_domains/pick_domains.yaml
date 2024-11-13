@@ -155,7 +155,7 @@ tests:
       - type: contains
         value: "performance"
       - type: llm-rubric
-        value: "The response should include queries comparing the performance of M1 and M2 MacBook Pro models, using Wikipedia YouTube for performance comparison videos."
+        value: "The response should include queries comparing the performance of M1 and M2 MacBook Pro models, using YouTube for performance comparison videos."
 
   - vars:
       query: "Configure Nginx as reverse proxy for Node.js"

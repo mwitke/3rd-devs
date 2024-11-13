@@ -23818,3 +23818,1009 @@ Chat Completion:
   "system_fingerprint": "fp_992d1ea92d"
 }
 
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Yes, Adam, you live in Krakow. How can I assist you today?</message>\n<message>assistant: From our previous conversations, I remember that you live in Krakow. How can I assist you today, Adam?</message>\n<message>assistant: Hello, Adam! It's nice to meet you. Krakow is a beautiful city with a rich history and vibrant culture. Is there something specific you'd like to know or discuss about Krakow, or is there anything else I can help you with today?</message>\n<memory>Adam lives in Krakow</memory>\n<memory>The user's family town is Lubiaszów</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I leave in Gdansk with my wife Mary "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AQu6v1WDyb2gfWr30tIo0WtVFODBe",
+  "object": "chat.completion",
+  "created": 1730975581,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 193,
+    "completion_tokens": 49,
+    "total_tokens": 242,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I leave in Gdansk with my wife Mary "
+  },
+  {
+    "role": "assistant",
+    "content": "Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask."
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AQu6xN0hdnjUNWtceLXZQ9LbRI1oy",
+  "object": "chat.completion",
+  "created": 1730975583,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User shared personal details about residence and family\",\n  \"keywords\": [\"gdansk\", \"mateusz\", \"mary\", \"residence\", \"adam\"],\n  \"content\": \"The user, Mateusz, lives in Gdansk with his wife Mary\",\n  \"title\": \"gdansk-residence\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 813,
+    "completion_tokens": 70,
+    "total_tokens": 883,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.</message>\n<message>assistant: Yes, Adam, you live in Krakow. How can I assist you today?</message>\n<message>assistant: From our previous conversations, I remember that you live in Krakow. How can I assist you today, Adam?</message>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n<memory>Adam lives in Krakow</memory>\n<memory>The user's family town is Lubiaszów</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I leave in Gdansk with my wife Mary "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AQu72mIsO4srzQdxD7NaOn1RoQTGx",
+  "object": "chat.completion",
+  "created": 1730975588,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 212,
+    "completion_tokens": 27,
+    "total_tokens": 239,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9e15ccd6a4"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I leave in Gdansk with my wife Mary "
+  },
+  {
+    "role": "assistant",
+    "content": "Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AQu74AEo5wK69zP6oQ7eXV3MJqDwf",
+  "object": "chat.completion",
+  "created": 1730975590,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User shared personal information about residency and relationship\",\n  \"keywords\": [\"gdansk\", \"mateusz\", \"mary\", \"adam\"],\n  \"content\": \"Mateusz lives in Gdansk with his wife Mary\",\n  \"title\": \"gdansk-residency\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 63,
+    "total_tokens": 854,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?</message>\n<message>assistant: Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.</message>\n<message>assistant: Yes, Adam, you live in Krakow. How can I assist you today?</message>\n<memory>Mateusz lives in Gdansk with his wife Mary</memory>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n<memory>Adam lives in Krakow</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I leave in Gdansk with my wife Mary "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AQu7Af4CfQbeNIjeOLYJzPae2pU7M",
+  "object": "chat.completion",
+  "created": 1730975596,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 219,
+    "completion_tokens": 27,
+    "total_tokens": 246,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I leave in Gdansk with my wife Mary "
+  },
+  {
+    "role": "assistant",
+    "content": "Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AQu7BCCw9N7ZUJmny55D6uv7vunAH",
+  "object": "chat.completion",
+  "created": 1730975597,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User shared personal living information and spouse's name\",\n  \"keywords\": [\"mateusz\", \"adam\", \"gdansk\", \"mary\", \"spouse\"],\n  \"content\": \"Mateusz lives in Gdansk with his wife, Mary.\",\n  \"title\": \"mateusz-gdansk-living\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 791,
+    "completion_tokens": 71,
+    "total_tokens": 862,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?</message>\n<message>assistant: Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?</message>\n<message>assistant: Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.</message>\n<memory>Mateusz lives in Gdansk with his wife, Mary.</memory>\n<memory>Mateusz lives in Gdansk with his wife Mary</memory>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I have two daughters and I like to play squash ",
+    "conversation_id": "3456210-asdfjkksjre"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AR2eUAeBkNJwKAF05ZgFEJY1GDCFB",
+  "object": "chat.completion",
+  "created": 1731008414,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello Mateusz! It's nice to hear from you again. It's great that you have two daughters and enjoy playing squash. How can I assist you today?",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 236,
+    "completion_tokens": 31,
+    "total_tokens": 267,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I have two daughters and I like to play squash ",
+    "conversation_id": "3456210-asdfjkksjre"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello Mateusz! It's nice to hear from you again. It's great that you have two daughters and enjoy playing squash. How can I assist you today?"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AR2eVudof7gjzwS9eabg0NzlBXzXE",
+  "object": "chat.completion",
+  "created": 1731008415,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User shared personal details regarding family and hobby\",\n  \"keywords\": [\"mateusz\", \"daughters\", \"squash\", \"hobby\", \"adam\"],\n  \"content\": \"Mateusz has two daughters and enjoys playing squash.\",\n  \"title\": \"mateusz-background\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 795,
+    "completion_tokens": 65,
+    "total_tokens": 860,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9ee9e968ea"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Hello Mateusz! It's nice to hear from you again. It's great that you have two daughters and enjoy playing squash. How can I assist you today?</message>\n<message>assistant: Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?</message>\n<message>assistant: Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?</message>\n<memory>Mateusz has two daughters and enjoys playing squash.</memory>\n<memory>Mateusz lives in Gdansk with his wife, Mary.</memory>\n<memory>Mateusz lives in Gdansk with his wife Mary</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I have two daughters and I like to play squash ",
+    "conversation_id": "3456210-asdfjkksjre"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AR2ebsohdSy2GV8j9AVXLGNqJQbOI",
+  "object": "chat.completion",
+  "created": 1731008421,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello Mateusz! It's great to hear from you again. I remember you live in Gdansk with your wife, Mary. How have you and your family been doing?",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "completion_tokens": 35,
+    "total_tokens": 248,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_143bb8492c"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I have two daughters and I like to play squash ",
+    "conversation_id": "3456210-asdfjkksjre"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello Mateusz! It's great to hear from you again. I remember you live in Gdansk with your wife, Mary. How have you and your family been doing?"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AR2ecNj0SZg92qdGw407lJYknwzpa",
+  "object": "chat.completion",
+  "created": 1731008422,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User introduced himself and shared personal interests and family details\",\n  \"keywords\": [\"adam\", \"mateusz\", \"daughters\", \"squash\"],\n  \"content\": \"Mateusz has two daughters and enjoys playing squash\",\n  \"title\": \"mateusz-personal-info\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 799,
+    "completion_tokens": 65,
+    "total_tokens": 864,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9ee9e968ea"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Hello Mateusz! It's nice to hear from you again. It's great that you have two daughters and enjoy playing squash. How can I assist you today?</message>\n<message>assistant: Hello Mateusz! It's great to hear from you again. I remember you live in Gdansk with your wife, Mary. How have you and your family been doing?</message>\n<message>assistant: Hello Mateusz! Yes, I remember that you live in Gdansk with your wife Mary. How can I assist you today?</message>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n<memory>Mateusz has two daughters and enjoys playing squash.</memory>\n<memory>Mateusz lives in Gdansk with his wife, Mary.</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I have two daughters and I like to play squash ",
+    "conversation_id": "3456210-asdfjkksjre"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AR2egNbZB6G7bOAIXmMYES9LGoHiW",
+  "object": "chat.completion",
+  "created": 1731008426,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Hello Mateusz! It's great to hear from you again. I remember you live in Gdansk with your wife, Mary. How have you and your family been doing?",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 219,
+    "completion_tokens": 35,
+    "total_tokens": 254,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_7193b6e18f"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "hello I am Mateusz. I have two daughters and I like to play squash ",
+    "conversation_id": "3456210-asdfjkksjre"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello Mateusz! It's great to hear from you again. I remember you live in Gdansk with your wife, Mary. How have you and your family been doing?"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-AR2eh3kVKDG9tmKZwglVqmIIeSae3",
+  "object": "chat.completion",
+  "created": 1731008427,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User introduced themselves and mentioned family and hobbies\",\n  \"keywords\": [\"mateusz\", \"daughters\", \"squash\", \"adam\"],\n  \"content\": \"Mateusz has two daughters and enjoys playing squash\",\n  \"title\": \"mateusz-introduction\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 799,
+    "completion_tokens": 62,
+    "total_tokens": 861,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9ee9e968ea"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.</message>\n<message>assistant: From our previous conversations, I remember that you live in Krakow. How can I assist you today, Adam?</message>\n<message>assistant: Hello Mateusz! It's great to hear from you again. I remember you live in Gdansk with your wife, Mary. How have you and your family been doing?</message>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdrDFeRu6n2gChUMjdN8443iZW1B",
+  "object": "chat.completion",
+  "created": 1731151431,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "The data you've posted seems to contain a sequence of arithmetic problems along with their answers. Two of these entries also ask a different sort of question:\n\n- \"What is the capital city of Poland?\"\n\nThe answer to that question is:\n\n- \"Warsaw\"\n\nLet me know if there's anything else you'd like help with!",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 515,
+    "completion_tokens": 63,
+    "total_tokens": 578,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  },
+  {
+    "role": "assistant",
+    "content": "The data you've posted seems to contain a sequence of arithmetic problems along with their answers. Two of these entries also ask a different sort of question:\n\n- \"What is the capital city of Poland?\"\n\nThe answer to that question is:\n\n- \"Warsaw\"\n\nLet me know if there's anything else you'd like help with!"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdrED3vW0qTEOWZZTCnhEVig2lQx",
+  "object": "chat.completion",
+  "created": 1731151432,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User's message contained arithmetic problems and a question about a capital city\",\n  \"keywords\": [\"arithmetic\", \"math\", \"capital\", \"poland\", \"warsaw\"],\n  \"content\": null,\n  \"title\": null\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1107,
+    "completion_tokens": 56,
+    "total_tokens": 1163,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_45cf54deae"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: The data you've posted seems to contain a sequence of arithmetic problems along with their answers. Two of these entries also ask a different sort of question:\n\n- \"What is the capital city of Poland?\"\n\nThe answer to that question is:\n\n- \"Warsaw\"\n\nLet me know if there's anything else you'd like help with!</message>\n<message>assistant: Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.</message>\n<message>assistant: From our previous conversations, I remember that you live in Krakow. How can I assist you today, Adam?</message>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdsehxXuTejTrhYpNp8UqMyOfQR0",
+  "object": "chat.completion",
+  "created": 1731151520,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "The data you've provided includes sequences of arithmetic problems with their respective answers. Additionally, it contains a repeated question:\n\n- \"What is the capital city of Poland?\"\n\nThe capital city of Poland is Warsaw. So, wherever the answer is indicated as \"???\", it should be replaced with \"Warsaw\".\n\nIf you have any more questions or need further assistance, feel free to let me know!",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 543,
+    "completion_tokens": 78,
+    "total_tokens": 621,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  },
+  {
+    "role": "assistant",
+    "content": "The data you've provided includes sequences of arithmetic problems with their respective answers. Additionally, it contains a repeated question:\n\n- \"What is the capital city of Poland?\"\n\nThe capital city of Poland is Warsaw. So, wherever the answer is indicated as \"???\", it should be replaced with \"Warsaw\".\n\nIf you have any more questions or need further assistance, feel free to let me know!"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdsg55m8nl8H8uk0G2osEkneI0sa",
+  "object": "chat.completion",
+  "created": 1731151522,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User provided data with arithmetic problems and a geographic trivia question\",\n  \"keywords\": [\"arithmetic\", \"problems\", \"poland\", \"capital\", \"geography\"],\n  \"content\": null,\n  \"title\": null\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1122,
+    "completion_tokens": 55,
+    "total_tokens": 1177,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_45cf54deae"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: The data you've provided includes sequences of arithmetic problems with their respective answers. Additionally, it contains a repeated question:\n\n- \"What is the capital city of Poland?\"\n\nThe capital city of Poland is Warsaw. So, wherever the answer is indicated as \"???\", it should be replaced with \"Warsaw\".\n\nIf you have any more questions or need further assistance, feel free to let me know!</message>\n<message>assistant: The data you've posted seems to contain a sequence of arithmetic problems along with their answers. Two of these entries also ask a different sort of question:\n\n- \"What is the capital city of Poland?\"\n\nThe answer to that question is:\n\n- \"Warsaw\"\n\nLet me know if there's anything else you'd like help with!</message>\n<message>assistant: Hello Mateusz! It's great to meet you. Gdansk is a beautiful city with a rich maritime history. If there's anything specific you'd like to know or discuss, whether it's about Gdansk or anything else, feel free to ask.</message>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdsjC2eZk5QHDnIkq8fJ1XnyGUQV",
+  "object": "chat.completion",
+  "created": 1731151525,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "It looks like the data includes a series of arithmetic problems along with their answers, and there are repeated questions about the capital city of Poland. As previously mentioned, the capital city of Poland is Warsaw. To correct the entries, replace each \"???\" with \"Warsaw\".\n\nHere's how you can correct the entries that ask about the capital city of Poland:\n\n```json\n{\n    \"question\": \"78 + 51\",\n    \"answer\": 129,\n    \"test\": {\n        \"q\": \"What is the capital city of Poland?\",\n        \"a\": \"Warsaw\"\n    }\n}\n```\n\nThis correction should be applied to each instance where the question \"What is the capital city of Poland?\" appears with the answer as \"???\". Let me know if there's anything else you need help with!",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 598,
+    "completion_tokens": 163,
+    "total_tokens": 761,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_159d8341cc"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  },
+  {
+    "role": "assistant",
+    "content": "It looks like the data includes a series of arithmetic problems along with their answers, and there are repeated questions about the capital city of Poland. As previously mentioned, the capital city of Poland is Warsaw. To correct the entries, replace each \"???\" with \"Warsaw\".\n\nHere's how you can correct the entries that ask about the capital city of Poland:\n\n```json\n{\n    \"question\": \"78 + 51\",\n    \"answer\": 129,\n    \"test\": {\n        \"q\": \"What is the capital city of Poland?\",\n        \"a\": \"Warsaw\"\n    }\n}\n```\n\nThis correction should be applied to each instance where the question \"What is the capital city of Poland?\" appears with the answer as \"???\". Let me know if there's anything else you need help with!"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdsmCYbSPjNguKmdbO67VqFgGSCg",
+  "object": "chat.completion",
+  "created": 1731151528,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User provided arithmetic questions and needed correction for a Poland capital fact\",\n  \"keywords\": [\"arithmetic\", \"poland\", \"capital\", \"warsaw\"],\n  \"content\": \"The capital city of Poland is Warsaw\",\n  \"title\": \"capital-of-poland\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1207,
+    "completion_tokens": 63,
+    "total_tokens": 1270,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_45cf54deae"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant who can answer questions based on the knowledge from previous messages and memories.\n\n<relevant_context>\n<message>assistant: It looks like the data includes a series of arithmetic problems along with their answers, and there are repeated questions about the capital city of Poland. As previously mentioned, the capital city of Poland is Warsaw. To correct the entries, replace each \"???\" with \"Warsaw\".\n\nHere's how you can correct the entries that ask about the capital city of Poland:\n\n```json\n{\n    \"question\": \"78 + 51\",\n    \"answer\": 129,\n    \"test\": {\n        \"q\": \"What is the capital city of Poland?\",\n        \"a\": \"Warsaw\"\n    }\n}\n```\n\nThis correction should be applied to each instance where the question \"What is the capital city of Poland?\" appears with the answer as \"???\". Let me know if there's anything else you need help with!</message>\n<message>assistant: The data you've provided includes sequences of arithmetic problems with their respective answers. Additionally, it contains a repeated question:\n\n- \"What is the capital city of Poland?\"\n\nThe capital city of Poland is Warsaw. So, wherever the answer is indicated as \"???\", it should be replaced with \"Warsaw\".\n\nIf you have any more questions or need further assistance, feel free to let me know!</message>\n<message>assistant: The data you've posted seems to contain a sequence of arithmetic problems along with their answers. Two of these entries also ask a different sort of question:\n\n- \"What is the capital city of Poland?\"\n\nThe answer to that question is:\n\n- \"Warsaw\"\n\nLet me know if there's anything else you'd like help with!</message>\n<memory>The capital city of Poland is Warsaw</memory>\n<memory>The user, Mateusz, lives in Gdansk with his wife Mary</memory>\n<memory>Mateusz has two daughters and enjoys playing squash</memory>\n</relevant_context>"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdsqEqEgf5zoMljpY8aolUaJmjGe",
+  "object": "chat.completion",
+  "created": 1731151532,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "It seems you have a list of arithmetic problems and an additional question regarding the capital of Poland. The entries labeled \"???\" for the question \"What is the capital city of Poland?\" should be corrected to reflect the correct answer, which is \"Warsaw\".\n\nHere's the corrected data:\n\n```json\n[\n    {\n        \"question\": \"8 + 19\",\n        \"answer\": 27\n    },\n    {\n        \"question\": \"77 + 62\",\n        \"answer\": 139\n    },\n    {\n        \"question\": \"5 + 31\",\n        \"answer\": 36\n    },\n    {\n        \"question\": \"78 + 51\",\n        \"answer\": 129,\n        \"test\": {\n            \"q\": \"What is the capital city of Poland?\",\n            \"a\": \"Warsaw\"\n        }\n    },\n    {\n        \"question\": \"69 + 36\",\n        \"answer\": 105\n    },\n    {\n        \"question\": \"6 + 35\",\n        \"answer\": 41\n    },\n    {\n        \"question\": \"8 + 19\",\n        \"answer\": 27\n    },\n    {\n        \"question\": \"77 + 62\",\n        \"answer\": 139\n    },\n    {\n        \"question\": \"5 + 31\",\n        \"answer\": 36\n    },\n    {\n        \"question\": \"78 + 51\",\n        \"answer\": 129,\n        \"test\": {\n            \"q\": \"What is the capital city of Poland?\",\n            \"a\": \"Warsaw\"\n        }\n    },\n    {\n        \"question\": \"69 + 36\",\n        \"answer\": 105\n    },\n    {\n        \"question\": \"6 + 35\",\n        \"answer\": 41\n    }\n]\n```\n\nIf there's anything else you need, feel free to ask!",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 709,
+    "completion_tokens": 384,
+    "total_tokens": 1093,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_45cf54deae"
+}
+
+Messages:
+[
+  {
+    "role": "system",
+    "content": "As an Adaptive Learning Analyzer with human-like memory tagging, your task is to scan AI-User conversations, extract key insights, and generate structured learning data. Your primary objective is to produce a JSON object containing _thoughts, keywords, content, and title based on your analysis, emphasizing memorable and useful tags.\n\nCore Rules:\n- Always return a valid JSON object, nothing else.\n- Analyze only the most recent AI-User exchange.\n- When the user speaks about himself, ALWAYS add a tag 'adam' to the keywords.\n- When you have existing information, skip learning and set 'content' and 'title' to null.\n- Learn from user messages unless explicitly asked to remember the conversation.\n- Provide ultra-concise self-reflection in the _thoughts field.\n- Extract memorable, specific keywords for the keywords field:\n  * Use lowercase for all tags\n  * Split compound concepts into individual tags (e.g., \"krakow_location\" becomes [\"krakow\", \"location\"])\n  * Prefer specific terms over generic ones (e.g., \"tesla\" over \"car\")\n  * Omit unhelpful descriptors (e.g., \"black_matte\" as a color)\n  * Focus on key concepts, names, and unique identifiers\n  * Use mnemonic techniques to create more memorable tags\n  * Limit to 3-7 tags per entry\n- Rephrase user information as if it's your own knowledge in the content field\n- Set content to null if no specific, useful information needs saving.\n- Never store trivial information (e.g., chitchat, greetings).\n- Don't process document information unless explicitly requested.\n- Focus on future-relevant information, mimicking human selective attention.\n- Maintain your base behavior; this analysis doesn't override your core functionality.\n- Generate a slugified, ultra-concise title for potential filename use.\n\nExamples of expected behavior:\n\nUSER: I live in Krakow, it's a beautiful city in southern Poland.\nAI: {\n  \"_thoughts\": \"User shared living location and brief description\",\n  \"keywords\": [\"krakow\", \"poland\", \"city\", \"south\"],\n  \"content\": \"The user lives in Krakow, a city in southern Poland described as beautiful\",\n  \"title\": \"place-of-living\"\n}\n\nUSER: I just bought a Tesla Model S in matte black.\nAI: {\n  \"_thoughts\": \"User mentioned recent car purchase\",\n  \"keywords\": [\"tesla\", \"model-s\", \"purchase\"],\n  \"content\": \"The user recently bought a Tesla Model S\",\n  \"title\": \"tesla-ownership\"\n}\n\nUSER: My favorite programming languages are Python and JavaScript.\nAI: {\n  \"_thoughts\": \"User expressed programming language preferences\",\n  \"keywords\": [\"python\", \"javascript\", \"coding\", \"preferences\"],\n  \"content\": \"The user's favorite programming languages are Python and JavaScript\",\n  \"title\": \"programming-languages\"\n}\n\nUSER: Hey, how's it going?\nAI: {\n  \"_thoughts\": \"Generic greeting, no significant information\",\n  \"keywords\": [],\n  \"content\": null,\n  \"title\": null\n}\n\nUSER: Remember this: The speed of light is approximately 299,792,458 meters per second.\nAI: {\n  \"_thoughts\": \"User shared scientific fact about light speed\",\n  \"keywords\": [\"light\", \"speed\", \"physics\", \"science\"],\n  \"content\": \"The speed of light is approximately 299,792,458 meters per second\",\n  \"title\": \"speed-of-light\"\n}"
+  },
+  {
+    "role": "user",
+    "content": "             {        \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },             {            \"question\": \"8 + 19\",            \"answer\": 27        },        {            \"question\": \"77 + 62\",            \"answer\": 139        },        {            \"question\": \"5 + 31\",            \"answer\": 36        },        {            \"question\": \"78 + 51\",            \"answer\": 129,            \"test\": {                \"q\": \"What is the capital city of Poland?\",                \"a\": \"???\"            }        },        {            \"question\": \"69 + 36\",            \"answer\": 105        },        {            \"question\": \"6 + 35\",            \"answer\": 41        },       "
+  },
+  {
+    "role": "assistant",
+    "content": "It seems you have a list of arithmetic problems and an additional question regarding the capital of Poland. The entries labeled \"???\" for the question \"What is the capital city of Poland?\" should be corrected to reflect the correct answer, which is \"Warsaw\".\n\nHere's the corrected data:\n\n```json\n[\n    {\n        \"question\": \"8 + 19\",\n        \"answer\": 27\n    },\n    {\n        \"question\": \"77 + 62\",\n        \"answer\": 139\n    },\n    {\n        \"question\": \"5 + 31\",\n        \"answer\": 36\n    },\n    {\n        \"question\": \"78 + 51\",\n        \"answer\": 129,\n        \"test\": {\n            \"q\": \"What is the capital city of Poland?\",\n            \"a\": \"Warsaw\"\n        }\n    },\n    {\n        \"question\": \"69 + 36\",\n        \"answer\": 105\n    },\n    {\n        \"question\": \"6 + 35\",\n        \"answer\": 41\n    },\n    {\n        \"question\": \"8 + 19\",\n        \"answer\": 27\n    },\n    {\n        \"question\": \"77 + 62\",\n        \"answer\": 139\n    },\n    {\n        \"question\": \"5 + 31\",\n        \"answer\": 36\n    },\n    {\n        \"question\": \"78 + 51\",\n        \"answer\": 129,\n        \"test\": {\n            \"q\": \"What is the capital city of Poland?\",\n            \"a\": \"Warsaw\"\n        }\n    },\n    {\n        \"question\": \"69 + 36\",\n        \"answer\": 105\n    },\n    {\n        \"question\": \"6 + 35\",\n        \"answer\": 41\n    }\n]\n```\n\nIf there's anything else you need, feel free to ask!"
+  }
+]
+
+Chat Completion:
+{
+  "id": "chatcmpl-ARdswxVS4WiHU3HHlwICNIIgoKbYP",
+  "object": "chat.completion",
+  "created": 1731151538,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"_thoughts\": \"User provided a list of math questions with a trivia question.\",\n  \"keywords\": [\"math\", \"arithmetic\", \"poland\", \"capital\", \"warsaw\"],\n  \"content\": \"User shared a list of arithmetic problems and mentioned Warsaw as the capital of Poland\",\n  \"title\": \"math-and-trivia-questions\"\n}",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1428,
+    "completion_tokens": 75,
+    "total_tokens": 1503,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_45cf54deae"
+}
+

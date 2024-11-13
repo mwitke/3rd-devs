@@ -21,7 +21,7 @@ app.post('/api/chat', async (req, res) => {
 
   try {
     const modelContextLength = 128000;
-    const maxOutputTokens = 50;
+    const maxOutputTokens = 5000;
     const inputTokens = await openAIService.countTokens(messages, model);
 
     if (inputTokens + maxOutputTokens > modelContextLength) {
